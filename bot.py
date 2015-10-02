@@ -26,7 +26,7 @@ def get_next_chunk():
 
 def tweet(message):
   auth = tweepy.OAuthHandler(secrets.consumer_key, secrets.consumer_secret)
-  auth.set_access_token(secrets.access_key, secrets.access_secret)
+  auth.set_access_token(secrets.access_token, secrets.access_token_secret)
   api = tweepy.API(auth)
   auth.secure = True
   print("Posting message {}".format(message))
